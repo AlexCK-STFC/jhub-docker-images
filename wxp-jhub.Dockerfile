@@ -13,7 +13,7 @@ RUN mamba install -y -c conda-forge \
     && mamba clean -afy
 
 RUN jupyter lab build --dev-build=False && \
-    mamba remove -y --force nodejs && \
+    mamba remove -n base -y nodejs && \
     jupyter lab clean && \
     mamba clean -afy && \
     rm -rf ~/.cache/yarn
