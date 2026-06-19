@@ -1,6 +1,7 @@
 name: Build and Push WXP JHub Image
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
