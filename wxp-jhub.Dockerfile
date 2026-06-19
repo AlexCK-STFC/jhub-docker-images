@@ -9,11 +9,10 @@ RUN mamba install -y -c conda-forge \
     nbformat \
     requests \
     jupyter-server-proxy \
-    nodejs \
     && mamba clean -afy
 
-RUN jupyter lab build --dev-build=False && \
-    mamba remove -n base -y nodejs && \
-    jupyter lab clean && \
+RUN mamba install -y -c conda-forge nodejs && \
+    jupyter lab build --dev-build=False && \
+    jupyter lab clean -y && \
     mamba clean -afy && \
     rm -rf ~/.cache/yarn
