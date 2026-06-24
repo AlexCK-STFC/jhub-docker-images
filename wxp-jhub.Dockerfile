@@ -9,12 +9,11 @@ RUN mamba install -y -c conda-forge \
     nbformat=5.10.4 \
     requests=2.34.2 \
     jupyter-server-proxy=4.5.0 \
+    nodejs=26.3.1 \
     && mamba clean -afy
 
-RUN mamba install -y -c conda-forge nodejs=26.3.1 && \
-    jupyter lab build --dev-build=False && \
+RUN jupyter lab build --dev-build=False && \
     jupyter lab clean -y && \
-    mamba clean -afy && \
     rm -rf ~/.cache/yarn
 
 RUN pip install --no-cache-dir jupyterlab_eigenpal_docx_viewer==0.1.0
@@ -22,6 +21,8 @@ RUN pip install --no-cache-dir jupyterlab_eigenpal_docx_viewer==0.1.0
 RUN pip install --no-cache-dir \
     jupyterlab-lsp==5.3.0 \
     python-lsp-server[all]==1.14.0
+
+RUN npm install --no-cache --save-dev unified-language-server@v4.1.0
 
 RUN mkdir -p /opt/conda/share/jupyter/lab/settings/
 
