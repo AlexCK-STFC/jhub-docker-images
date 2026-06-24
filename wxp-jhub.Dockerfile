@@ -20,7 +20,7 @@ RUN mamba install -y -c conda-forge nodejs=26.3.1 && \
 RUN pip install --no-cache-dir jupyterlab_eigenpal_docx_viewer==0.1.0
 
 RUN pip install --no-cache-dir \
-    jupyterlab-lsp==2.3.1 \
+    jupyterlab-lsp==5.3.0 \
     python-lsp-server==1.14.0
 
 RUN mkdir -p /opt/conda/share/jupyter/lab/settings/
