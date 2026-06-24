@@ -18,3 +18,7 @@ RUN mamba install -y -c conda-forge nodejs && \
     rm -rf ~/.cache/yarn
 
 RUN pip install --no-cache-dir jupyterlab_eigenpal_docx_viewer
+
+RUN pip install --no-cache-dir \
+    jupyterlab-lsp \
+    jedi-language-server
