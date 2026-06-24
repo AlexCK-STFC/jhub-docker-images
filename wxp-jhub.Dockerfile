@@ -21,4 +21,4 @@ RUN pip install --no-cache-dir jupyterlab_eigenpal_docx_viewer==0.1.0
 
 RUN pip install --no-cache-dir \
     jupyterlab-lsp=2.3.1 \
-    jedi-language-server==0.47.0
+    python-lsp-server=1.14.0
