@@ -5,5 +5,18 @@
   },
   "@jupyter-lsp/jupyterlab-lsp:completion": {
     "continuousHinting": true
+  },
+  "@jupyter-lsp/jupyterlab-lsp:plugin": {
+    "language_servers": {
+        "pylsp": {
+            "serverSettings": {
+                "pylsp.plugins.autopep8.enabled": false,
+                "pylsp.plugins.flake8.enabled": false,
+                "pylsp.plugins.mccabe.enabled": false,
+                "pylsp.plugins.pycodestyle.enabled": false,
+                "pylsp.plugins.ruff.enabled": true
+            }
+        }
+    }
   }
 }
