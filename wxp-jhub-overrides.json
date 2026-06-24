@@ -18,5 +18,8 @@
             }
         }
     }
+  },
+  "@jupyter-lsp/jupyterlab-lsp:hover": {
+        "autoActivate": true
   }
 }
