@@ -22,3 +22,7 @@ RUN pip install --no-cache-dir jupyterlab_eigenpal_docx_viewer==0.1.0
 RUN pip install --no-cache-dir \
     jupyterlab-lsp=2.3.1 \
     python-lsp-server=1.14.0
+
+RUN mkdir -p /opt/conda/share/jupyter/lab/settings/
+
+COPY wxp-jhub-overrides.json /opt/conda/share/jupyter/lab/settings/overrides.json
