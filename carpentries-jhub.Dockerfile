@@ -5,11 +5,12 @@ RUN mamba install -y -c conda-forge \
     plotly=6.8.0 \
     panel=1.9.3 \
     dash=4.2.0 \
-    nbgitpuller==1.3.0 \
+    nbgitpuller=1.3.0 \
     nbconvert=7.17.1 \
     nbformat=5.10.4 \
     requests=2.34.2 \
     jupyter-server-proxy=4.5.0 \
+    jupyterlab-chat=0.22.1 \
     nodejs=26.3.1 \
     && mamba clean -afy
 
