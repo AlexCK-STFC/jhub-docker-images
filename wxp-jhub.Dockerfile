@@ -27,3 +27,7 @@ RUN npm install --no-cache --save-dev unified-language-server@v4.1.0
 RUN mkdir -p /opt/conda/share/jupyter/lab/settings/
 
 COPY wxp-jhub-overrides.json /opt/conda/share/jupyter/lab/settings/overrides.json
+
+RUN pip install --no-cache-dir \
+    git-credential-helpers==0.2 \
+    nbgitpuller==1.3.0
