@@ -21,5 +21,10 @@
   },
   "@jupyter-lsp/jupyterlab-lsp:hover": {
         "autoActivate": true
+  },
+  "@jupyterlab/docmanager-extension:plugin": {
+    "defaultViewers": {
+        "markdown": "Markdown Preview"
+    }
   }
 }
