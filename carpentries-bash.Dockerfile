@@ -15,4 +15,9 @@ RUN apt-get update \
     && printf 'y\n' | unminimize \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install -y sudo && \
+    echo "${NB_USER} ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/${NB_USER} && \
+    chmod 0440 /etc/sudoers.d/${NB_USER} && \
+    rm -rf /var/lib/apt/lists/*
+
 USER ${NB_UID}
