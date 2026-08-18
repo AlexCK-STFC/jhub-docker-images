@@ -2,6 +2,7 @@ FROM quay.io/jupyter/minimal-notebook@sha256:1fbcf7e462a634e141c541b15885081632a
 
 RUN mamba install -y -c conda-forge \
     jupyter-collaboration=4.4.1 \
+    jupyterlab-git==0.54.1 \
     && mamba clean -afy
 
 RUN pip install --no-cache-dir \
