@@ -15,7 +15,7 @@ USER root
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
     && apt-get install -y --no-install-recommends man-db \
-    && yes | unminimize \
+    && (set +o pipefail; yes | unminimize) \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && apt-get install -y sudo && \
