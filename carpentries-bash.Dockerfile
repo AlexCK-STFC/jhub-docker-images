@@ -12,9 +12,10 @@ RUN pip install --no-cache-dir \
 
 USER root
 
-RUN apt-get update \
+RUN export DEBIAN_FRONTEND=noninteractive \
+    && apt-get update \
     && apt-get install -y --no-install-recommends man-db \
-    && printf 'y\n' | unminimize \
+    && yes | unminimize \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && apt-get install -y sudo && \
