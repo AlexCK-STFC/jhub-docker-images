@@ -28,3 +28,7 @@ USER ${NB_UID}
 ENV PATH="${PATH}:/usr/games:/usr/local/games"
 
 COPY carpentries-bash-overrides.json /opt/conda/share/jupyter/lab/settings/overrides.json
+
+USER root
+RUN cat /etc/skel/.bashrc >> /etc/bash.bashrc
+USER $NB_UID
