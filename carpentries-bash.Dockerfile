@@ -8,7 +8,12 @@ RUN mamba install -y -c conda-forge \
 
 RUN pip install --no-cache-dir \
     git-credential-helpers==0.2 \
-    nbgitpuller==1.3.0
+    nbgitpuller==1.3.0 \
+    jupyterlab_vscode_icons_extension==1.1.109 \
+    jupyterlab_file_browser_sorting_extension==1.0.15 \
+    jupyterlab_git_syntax_extension==1.0.7 \
+    jupyterlab_open_in_terminal_extension==1.0.16 \
+    jupyterlab_zip_extension==1.2.9
 
 USER root
 

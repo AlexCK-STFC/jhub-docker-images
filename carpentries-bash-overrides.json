@@ -3,5 +3,10 @@
     "defaultViewers": {
         "markdown": "Markdown Preview"
     }
+  },
+
+  "@jupyterlab/filebrowser-extension:browser": {
+    "showHiddenFiles": true,
+    "showFileSizeColumn": true
   }
 }
