@@ -31,4 +31,8 @@ COPY carpentries-bash-overrides.json /opt/conda/share/jupyter/lab/settings/overr
 
 USER root
 RUN cat /etc/skel/.bashrc >> /etc/bash.bashrc
+RUN export DEBIAN_FRONTEND=noninteractive \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends fortune-mod \
+    && rm -rf /var/lib/apt/lists/*
 USER $NB_UID
