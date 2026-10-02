@@ -41,3 +41,8 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y fortune-mod fortunes-min \
     && rm -rf /var/lib/apt/lists/*
 USER $NB_UID
+
+RUN rm -rf \
+    /home/jovyan/.mamba \
+    /home/jovyan/.ipython \
+    /home/jovyan/.cache
