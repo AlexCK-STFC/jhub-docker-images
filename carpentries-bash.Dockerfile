@@ -38,7 +38,7 @@ USER root
 RUN cat /etc/skel/.bashrc >> /etc/bash.bashrc
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
-    && apt-get install -y fortune-mod fortunes-min \
+    && apt-get install -y fortune-mod fortunes-min nano\
     && rm -rf /var/lib/apt/lists/*
 USER $NB_UID
 
